@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 export const getProducts = query => {
-	const { search, sortBy, sort, page, limit } = query;
+	const { search, sortBy, sort, limit, page } = query;
+	console.log(page)
 	return {
 		type: 'GET_PRODUCTS',
 		payload: axios.get(`/api/products?sortBy=${sortBy}&sort=${sort}&page=${page}&limit=${limit}&search=${search}`)

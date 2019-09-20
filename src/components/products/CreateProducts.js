@@ -85,6 +85,7 @@ class CreateProducts extends Component {
 }
 
 const mapStateToProps = state => ({
+	product: state.product,
 	category: state.category,
 	user: state.user
 })

@@ -13,7 +13,7 @@ export default function(state = initState, action) {
 	switch (action.type) {
 		case 'GET_PRODUCTS_PENDING':
 		case 'GET_PRODUCT_PENDING':
-		case 'CREATE_PRODUCT_REJECT':
+		case 'CREATE_PRODUCT_PENDING':
 		case 'UPDATE_PRODUCT_PENDING':
 		case 'DELETE_PRODUCT_PENDING':
 			return {

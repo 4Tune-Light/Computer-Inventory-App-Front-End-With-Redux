@@ -29,7 +29,7 @@ class SingleProducts extends Component {
 			<div className="container-fluid">
 			<div id="singleProducts" className="p-4">
 				{
-					isLoading ? <img className="img-fluid img-size mx-auto" src="https://avanauptown.com/views/site/images/icons/loading.gif" /> 
+					isLoading ? ''
 					:  (
 					<div className="row">
 					<div className="col-4 border-right"><img src={products.image} className="img-fluid img-h" onError={() => {products.image = 'https://images.vexels.com/media/users/3/127491/isolated/preview/8cb9767b47a1f58908a132a8df10b748-computer-set-flat-icon-by-vexels.png'; this.forceUpdate()}} alt="Something that you would like to buy :)"/></div>

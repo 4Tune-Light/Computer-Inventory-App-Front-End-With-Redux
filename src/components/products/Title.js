@@ -10,7 +10,7 @@ class Title extends Component {
 	state = {
 		search: '%%',
 		sortBy: 'updated_at',
-		sort: 'ASC',
+		sort: 'DESC',
 		page: 1,
 		limit: 6,
 	}
@@ -61,8 +61,8 @@ class Title extends Component {
 						</ul>
 					</div>
 					<div className="col-4">
-						  <select defaultValue="Select Page" className="form-control" name="page" onChange={this.handlerChange}>
-						  	<option disabled>Select Page</option>
+						  <select value={this.state.page} className="form-control" name="page" onChange={this.handlerChange}>
+						  	<option disabled selected>Select Page</option>
 						{
 							this.props.pagination.map(num => {
 								return <option value={num} key={num}>{num}</option>

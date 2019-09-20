@@ -38,7 +38,6 @@ class EditProducts extends Component {
 	}
 
 	render() {
-		const { products } = this.props.product;
 		const { categories } = this.props.category;
 		const { id, name, image, id_category, quantity, description } = this.state;
 		if (this.props.product.isRedirected) {

@@ -30,8 +30,9 @@ class Products extends Component {
 		this.props.getProducts(this.state); 
 	}
 
-	deleteProduct = id => {
-		this.props.deleteProduct(id, this.props.user);
+	deleteProduct = async (id) => {
+		await this.props.deleteProduct(id, this.props.user);
+		await this.props.getProducts(this.state); 
 	}
 
 	callBack = async (query) => {
@@ -50,7 +51,6 @@ class Products extends Component {
 
 	render() {
 		const pageNum = this.pageNumber();
-		console.log(pageNum)
 		const { isLoading, products, total } = this.props.product;
 		return (
 			<div>
